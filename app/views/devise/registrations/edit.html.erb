@@ -1,0 +1,48 @@
+<div class="container">
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put, class: "needs-validation", novalidate: true }) do |f| %>
+    <div class="card mx-auto" style="width:25rem">
+      <div class="card-header bg-primary text-white">
+        <h2>Perfil de <%= current_user.name %> </h2>
+      </div>
+      <div class="card-body ">
+        <%= render "devise/shared/error_messages", resource: resource %>
+
+        <div class="input-group mb-4">
+          <span class="input-group-text">Name</span>
+          <%= f.text_field :name, class: "form-control", id: "name", required: true %>
+        </div>
+
+        <div class="input-group mb-4">
+          <span class="input-group-text">Email</span>
+          <%= f.email_field :email, class: "form-control", id: "email", required: true, autofocus: true, autocomplete: "email" %>
+        </div>
+
+        <div class="input-group mb-4">
+          <span class="input-group-text">Password</span>
+          <%= f.password_field :password, class: "form-control", id: "password", autocomplete: "new-password" %>
+        </div>
+
+        <div class="input-group mb-4">
+          <span class="input-group-text">Password Confirmation</span>
+          <%= f.password_field :password_confirmation, class: "form-control", id: "password_confirmation", autocomplete: "new-password" %>
+        </div>
+
+        <div class="input-group mb-4">
+          <span class="input-group-text">Current Password</span>
+          <%= f.password_field :current_password, class: "form-control", id: "current_password", autocomplete: "current-password" %>
+        </div>
+
+        <div class="text-center"><%= f.submit "Salvar", class: "btn btn-primary", data: {confirm: "Are you sure you want to update your profile?"} %></div>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="container mx-auto text-center" style="width:40rem">
+   
+  <br>
+      <div>Unhappy?<br> <br><%= button_to t('cancel_account'), registration_path(resource_name), data: { confirm: "Are you sure?", turbo_confirm: "Are you sure?" }, method: :delete, class: "btn btn-danger" %></div>
+    
+  </div>
+
+  <%= link_to 'Back', :back, class: 'btn btn-primary' %>
+</div>

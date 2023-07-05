@@ -1,0 +1,27 @@
+<div class="card mx-auto" style="width: 30rem;">
+  <% image_url = food.image_url.present? ? food.image_url : 'https://w7.pngwing.com/pngs/205/731/png-transparent-default-avatar-thumbnail.png' %>
+  <img src="<%= asset_path("#{image_url}") %>" class="card-img-top " alt="...">
+  
+  <div class="card-body">
+    <h5 class="card-title"><%= food.name %> </h5>
+    <ul>
+      <li class="list-group-item">
+        <strong><%= t('kcal')%></strong>
+        <%= food.kcal.nil? ? 0 : food.kcal %>
+      </li>
+      <li class="list-group-item">
+        <strong><%= t('protein')%></strong>
+        <%= food.protein.nil? ? 0 : food.protein %>
+      </li>
+      <li class="list-group-item">
+        <strong><%= t('carbohydrates')%></strong>
+        <%= food.carbohydrates.nil? ? 0 : food.carbohydrates %>
+      </li>
+      <li class="list-group-item">
+        <strong><%= t('lipids')%></strong>
+        <%= food.lipids.nil? ? 0 : food.lipids %>
+      </li>
+    </ul>
+
+  </div>
+</div>

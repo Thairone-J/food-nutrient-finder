@@ -1,0 +1,51 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-md-8">
+      <%= render @food %>
+
+
+
+
+
+    </div>
+    <div class="col-md-4">
+    
+       <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+
+   <%= link_to "Deletar alimento", @food, method: :delete, class: "btn btn-danger", data: { confirm: 'Tem certeza que deseja destruir esta comida?' }%>
+  <%= link_to 'Adicionar aos Favoritos', add_to_favorites_food_path(@food), method: :post, class: "btn btn-success", data: {alert:"alerta"} %>
+  </div>  
+  
+
+<br><br>
+   <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+  <%= link_to "Editar alimento", edit_food_path(@food), method: :get, class: "btn btn-warning", data: {confirm: "Não é recomendado modificar os nutrientes do alimento, deseja continuar?"}%> 
+  <%= link_to "Voltar para tela principal", root_path, method: :get, class: "btn btn-secondary" %>
+  
+</div>  
+<br><br>
+  <%= form_for @food do |f| %>
+    <%= f.label :image_url %>:
+    <%= f.text_field :image_url %><br />
+  
+  
+  
+    <%= f.submit %>
+  <% end %>
+
+
+
+    </div>
+    
+  </div>
+  
+
+</div>
+
+
+
+                 
+
+
+
+

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ComidasApp</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application" %>
+    <%= javascript_importmap_tags %>
+    <%= javascript_include_tag 'application' %>
+    <%= render 'header' %>
+
+  </head>
+
+
+  <body>
+
+<div class="mx-auto my-5 text-center" style="width: 18rem;">
+      <% flash.each do |message_type, message| %>
+        <div class="alert alert-<%= bootstrap_class_for(message_type) %>">
+          <%= message %>
+         </div>
+          </div>
+        <% end %>
+    
+    </div>
+
+      <%= yield %>
+  </body>
+</html>

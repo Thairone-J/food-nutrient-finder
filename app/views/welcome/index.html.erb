@@ -1,0 +1,59 @@
+<%= stylesheet_link_tag 'home' %>
+
+
+
+<% if user_signed_in? %>
+
+
+
+
+
+<div class="container" style="margin-top: 150px;"><h1>Alimentos & Nutrientes </h1></div>
+
+<div class="container mt-5 d-flex align-items-center justify-content-center">
+
+
+
+  <%= form_with(url: "/search", method: "get", class: "input-group mb-3 col-12 col-md-6") do %>
+    <%= text_field_tag :q, nil, placeholder: "Procurar um alimento", class: "form-control", 'aria-label': "Procurar um Alimento:", 'aria-describedby': "button-addon2" %>
+    <%= button_tag "Pesquisar", class: "btn btn-success", type: "submit", id: "button-addon2" %>
+  <% end %>
+
+
+
+
+</div>
+
+<div class="card mx-auto" style="width:18rem "> 
+<div class="card-header text-center">   <%=current_user.name%>    <%= bootstrap_icon "check", width: 50, height: 50, fill: "green" %>
+   </div>
+  <div class="card-body">  <%= link_to 'Editar Usuário', edit_user_registration_path %>  </div>
+
+</div>
+
+
+
+
+
+
+  
+<% else %>
+
+
+  
+
+<div class="container"style="margin-top: 150px;"><h1>Alimentos & Nutrientes</h1></div>
+
+<div class="container mt-5 d-flex align-items-center justify-content-center">
+
+
+
+  <%= form_with(url: "/search", method: "get", class: "input-group mb-3 col-12 col-md-6") do %>
+    <%= text_field_tag :q, nil, placeholder: "Procurar um alimento", class: "form-control", 'aria-label': "Procurar um Alimento:", 'aria-describedby': "button-addon2" %>
+    <%= button_tag "Pesquisar", class: "btn btn-success", type: "submit", id: "button-addon2" %>
+  <% end %>
+
+
+<% end %>
+
+

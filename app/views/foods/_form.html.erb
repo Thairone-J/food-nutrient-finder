@@ -1,0 +1,56 @@
+
+
+
+       <div class="container">
+         <%= link_to '< Voltar', food_path, class: 'btn btn-primary ' %>
+            <div class="card mx-auto" style="width:40rem">
+              <div class="card-header bg-primary text-white">
+                <h2>Adicionar / Atualizar Alimento</h2>
+              </div>
+              <div class="card-body">
+                <%= form_with(model: @food, html: {class: "needs-validation", novalidate: true}) do |form| %>
+                  <div class="input-group mb-4">
+                    <span class="input-group-text">Nome do Alimento</span>
+                    <%= form.text_field :name, class: "form-control", id: "name", required: true %>
+                  </div>
+                  <% nutrient_fields = [
+                    { name: :image_url, label: "Caminho da imagem" },
+                    { name: :moisture, label: "Umidade" },
+                    { name: :kcal, label: "Kcal" },
+                    { name: :kj, label: "Kj" },
+                    { name: :protein, label: "Proteína" },
+                    { name: :lipids, label: "Lipídios" },
+                    { name: :cholesterol, label: "Colesterol" },
+                    { name: :carbohydrates, label: "Carboidratos" },
+                    { name: :dietary_fiber, label: "Fibra Alimentar" },
+                    { name: :ash, label: "Cinzas" },
+                    { name: :calcium, label: "Cálcio" },
+                    { name: :magnesium, label: "Magnésio" },
+                    { name: :manganese, label: "Manganês" },
+                    { name: :phosphorus, label: "Fósforo" },
+                    { name: :iron, label: "Ferro" },
+                    { name: :sodium, label: "Sódio" },
+                    { name: :potassium, label: "Potássio" },
+                    { name: :copper, label: "Cobre" },
+                    { name: :zinc, label: "Zinco" },
+                    { name: :retinol, label: "Retinol" },
+                    { name: :re, label: "RE" },
+                    { name: :rae, label: "RAE" },
+                    { name: :thiamin, label: "Tiamina" },
+                    { name: :riboflavin, label: "Riboflavina" },
+                    { name: :pyridoxine, label: "Piridoxina" },
+                    { name: :niacin, label: "Niacina" },
+                    { name: :vitamin_c, label: "Vitamina C" }
+                  ] %>
+                  <% nutrient_fields.each do |field| %>
+                    <div class="input-group mb-4">
+                      <span class="input-group-text"><%= field[:label] %></span>
+                      <%= form.text_field field[:name], class: "form-control", id: field[:name], required: true %>
+                    </div>
+                  <% end %>
+                  <%= form.submit "Salvar", class: "btn btn-primary", data: {confirm: "Atualizar este alimento comprometerá a validade das informações no banco de dados. Deseja continuar mesmo assim?"} %>
+                <% end %>
+              </div>
+            </div>
+         
+       </div>

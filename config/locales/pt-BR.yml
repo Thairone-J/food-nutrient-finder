@@ -1,0 +1,25 @@
+pt-BR:
+  name: "Nome:"
+  moisture: "Umidade:"
+  kcal: "Kcal:"
+  kj: "Kj:"
+  protein: "Proteína:"
+  lipids: "Lipídios:"
+  cholesterol: "Colesterol:"
+  carbohydrates: "Carboidratos:"
+  dietary_fiber: "Fibra Alimentar:"
+  edit_food: "Editar esse alimento"
+  back_foods: "Voltar para alimentos"
+  destroy_food: "Deletar esse alimento"
+  removed_favorites: "Alimento removido!"
+  favorite_save: "Alimento salvo em favoritos!"
+  cancel_account: "Cancelar minha conta de usuário"
+  no_fav: "Você ainda não salvou nenhum alimento em favoritos!"  
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            password:
+              too_short: "é muito curto (mínimo de %{count} caracteres)"
+           

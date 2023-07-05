@@ -1,0 +1,59 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  moisture: 1.5
+  kcal: 1.5
+  kj: 1.5
+  protein: 1.5
+  lipids: 1.5
+  cholesterol: 1.5
+  carbohydrates: 1.5
+  dietary_fiber: 1.5
+  ash: 1.5
+  calcium: 1.5
+  magnesium: 1.5
+  manganese: 1.5
+  phosphorus: 1.5
+  iron: 1.5
+  sodium: 1.5
+  potassium: 1.5
+  copper: 1.5
+  zinc: 1.5
+  retinol: 1.5
+  re: 1.5
+  rae: 1.5
+  thiamin: 1.5
+  riboflavin: 1.5
+  pyridoxine: 1.5
+  niacin: 1.5
+  vitamin_c: 1.5
+
+two:
+  name: MyString
+  moisture: 1.5
+  kcal: 1.5
+  kj: 1.5
+  protein: 1.5
+  lipids: 1.5
+  cholesterol: 1.5
+  carbohydrates: 1.5
+  dietary_fiber: 1.5
+  ash: 1.5
+  calcium: 1.5
+  magnesium: 1.5
+  manganese: 1.5
+  phosphorus: 1.5
+  iron: 1.5
+  sodium: 1.5
+  potassium: 1.5
+  copper: 1.5
+  zinc: 1.5
+  retinol: 1.5
+  re: 1.5
+  rae: 1.5
+  thiamin: 1.5
+  riboflavin: 1.5
+  pyridoxine: 1.5
+  niacin: 1.5
+  vitamin_c: 1.5
